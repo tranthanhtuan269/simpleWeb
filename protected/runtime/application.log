@@ -1,0 +1,18 @@
+2015/12/14 08:24:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "rights".' in C:\xampp\htdocs\tuhoc\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\tuhoc\framework\web\CWebApplication.php(141): CWebApplication->runController('rights')
+#1 C:\xampp\htdocs\tuhoc\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\tuhoc\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/tuhoc/index.php?r=rights
+---
+2015/12/14 10:23:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "myController/run".' in C:\xampp\htdocs\tuhoc\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\tuhoc\framework\web\CWebApplication.php(141): CWebApplication->runController('myController/ru...')
+#1 C:\xampp\htdocs\tuhoc\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\tuhoc\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/tuhoc/index.php/myController/run
+---
+2015/12/14 10:39:17 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'tuhoc.tbl_migration' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `tbl_migration`.
+2015/12/14 10:39:58 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '{users}} SET create_at = FROM_UNIXTIME(createtime), lastvisit_at = IF(lastvisit,' at line 1. The SQL statement executed was: UPDATE {{users}} SET create_at = FROM_UNIXTIME(createtime), lastvisit_at = IF(lastvisit,FROM_UNIXTIME(lastvisit),'0000-00-00 00:00:00').
