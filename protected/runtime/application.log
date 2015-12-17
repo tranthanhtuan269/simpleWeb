@@ -1,18 +1,295 @@
-2015/12/14 08:24:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "rights".' in C:\xampp\htdocs\tuhoc\framework\web\CWebApplication.php:286
+2015/12/16 09:07:35 [error] [php] include(User.php): failed to open stream: No such file or directory (C:\xampp\htdocs\tuhoc\framework\YiiBase.php:432)
 Stack trace:
-#0 C:\xampp\htdocs\tuhoc\framework\web\CWebApplication.php(141): CWebApplication->runController('rights')
+#0 C:\xampp\htdocs\tuhoc\protected\components\UserIdentity.php(22): spl_autoload_call()
+#1 C:\xampp\htdocs\tuhoc\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#2 C:\xampp\htdocs\tuhoc\framework\validators\CInlineValidator.php(42): LoginForm->authenticate()
+#3 C:\xampp\htdocs\tuhoc\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute()
+#4 C:\xampp\htdocs\tuhoc\framework\base\CModel.php(159): CInlineValidator->validate()
+#5 C:\xampp\htdocs\tuhoc\protected\controllers\SiteController.php(94): LoginForm->validate()
+#6 C:\xampp\htdocs\tuhoc\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#7 C:\xampp\htdocs\tuhoc\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 C:\xampp\htdocs\tuhoc\framework\web\CController.php(286): SiteController->runAction()
+#9 C:\xampp\htdocs\tuhoc\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#10 C:\xampp\htdocs\tuhoc\framework\web\CWebApplication.php(282): SiteController->run()
+#11 C:\xampp\htdocs\tuhoc\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\xampp\htdocs\tuhoc\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\tuhoc\index.php(13): CWebApplication->run()
+REQUEST_URI=/tuhoc/index.php?r=site/login
+in C:\xampp\htdocs\tuhoc\protected\components\UserIdentity.php (22)
+in C:\xampp\htdocs\tuhoc\protected\models\LoginForm.php (52)
+in C:\xampp\htdocs\tuhoc\protected\controllers\SiteController.php (94)
+2015/12/16 09:08:47 [error] [exception.CDbException] exception 'CDbException' with message 'Table "users" does not have a column named "email".' in C:\xampp\htdocs\tuhoc\framework\db\schema\CDbCommandBuilder.php:697
+Stack trace:
+#0 C:\xampp\htdocs\tuhoc\framework\db\ar\CActiveRecord.php(1523): CDbCommandBuilder->createColumnCriteria(Object(CMysqlTableSchema), Array, '', Array, '`t`.')
+#1 C:\xampp\htdocs\tuhoc\protected\components\UserIdentity.php(22): CActiveRecord->findByAttributes(Array)
+#2 C:\xampp\htdocs\tuhoc\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#3 C:\xampp\htdocs\tuhoc\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#4 C:\xampp\htdocs\tuhoc\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#5 C:\xampp\htdocs\tuhoc\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#6 C:\xampp\htdocs\tuhoc\protected\controllers\SiteController.php(94): CModel->validate()
+#7 C:\xampp\htdocs\tuhoc\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#8 C:\xampp\htdocs\tuhoc\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\tuhoc\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\tuhoc\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\tuhoc\framework\web\CWebApplication.php(282): CController->run('login')
+#12 C:\xampp\htdocs\tuhoc\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#13 C:\xampp\htdocs\tuhoc\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\tuhoc\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/tuhoc/index.php?r=site/login
+HTTP_REFERER=http://localhost/tuhoc/index.php?r=site/login
+---
+2015/12/16 09:17:09 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\tuhoc\protected\components\UserIdentity.php:23)
+Stack trace:
+#0 C:\xampp\htdocs\tuhoc\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute()
+#1 C:\xampp\htdocs\tuhoc\framework\base\CModel.php(159): CInlineValidator->validate()
+#2 C:\xampp\htdocs\tuhoc\protected\controllers\SiteController.php(94): LoginForm->validate()
+#3 C:\xampp\htdocs\tuhoc\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 C:\xampp\htdocs\tuhoc\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\tuhoc\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\xampp\htdocs\tuhoc\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\xampp\htdocs\tuhoc\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\xampp\htdocs\tuhoc\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\tuhoc\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\tuhoc\index.php(13): CWebApplication->run()
+REQUEST_URI=/tuhoc/index.php?r=site/login
+in C:\xampp\htdocs\tuhoc\protected\components\UserIdentity.php (23)
+in C:\xampp\htdocs\tuhoc\protected\models\LoginForm.php (52)
+in C:\xampp\htdocs\tuhoc\protected\controllers\SiteController.php (94)
+2015/12/16 09:18:45 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\tuhoc\protected\components\UserIdentity.php:23)
+Stack trace:
+#0 C:\xampp\htdocs\tuhoc\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute()
+#1 C:\xampp\htdocs\tuhoc\framework\base\CModel.php(159): CInlineValidator->validate()
+#2 C:\xampp\htdocs\tuhoc\protected\controllers\SiteController.php(94): LoginForm->validate()
+#3 C:\xampp\htdocs\tuhoc\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#4 C:\xampp\htdocs\tuhoc\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\tuhoc\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\xampp\htdocs\tuhoc\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\xampp\htdocs\tuhoc\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\xampp\htdocs\tuhoc\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\tuhoc\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\tuhoc\index.php(13): CWebApplication->run()
+REQUEST_URI=/tuhoc/index.php?r=site/login
+in C:\xampp\htdocs\tuhoc\protected\components\UserIdentity.php (23)
+in C:\xampp\htdocs\tuhoc\protected\models\LoginForm.php (52)
+in C:\xampp\htdocs\tuhoc\protected\controllers\SiteController.php (94)
+2015/12/16 09:19:27 [error] [exception.CException] exception 'CException' with message 'WebUser.allowAutoLogin must be set true in order to use cookie-based authentication.' in C:\xampp\htdocs\tuhoc\framework\web\auth\CWebUser.php:240
+Stack trace:
+#0 C:\xampp\htdocs\tuhoc\protected\models\LoginForm.php(71): CWebUser->login(Object(UserIdentity), 2592000)
+#1 C:\xampp\htdocs\tuhoc\protected\controllers\SiteController.php(94): LoginForm->login()
+#2 C:\xampp\htdocs\tuhoc\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#3 C:\xampp\htdocs\tuhoc\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\tuhoc\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\tuhoc\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\tuhoc\framework\web\CWebApplication.php(282): CController->run('login')
+#7 C:\xampp\htdocs\tuhoc\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#8 C:\xampp\htdocs\tuhoc\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\tuhoc\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/tuhoc/index.php?r=site/login
+HTTP_REFERER=http://localhost/tuhoc/index.php?r=site/login
+---
+2015/12/16 09:19:58 [error] [exception.CException] exception 'CException' with message 'WebUser.allowAutoLogin must be set true in order to use cookie-based authentication.' in C:\xampp\htdocs\tuhoc\framework\web\auth\CWebUser.php:240
+Stack trace:
+#0 C:\xampp\htdocs\tuhoc\protected\models\LoginForm.php(71): CWebUser->login(Object(UserIdentity), 2592000)
+#1 C:\xampp\htdocs\tuhoc\protected\controllers\SiteController.php(94): LoginForm->login()
+#2 C:\xampp\htdocs\tuhoc\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#3 C:\xampp\htdocs\tuhoc\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\tuhoc\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\tuhoc\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\tuhoc\framework\web\CWebApplication.php(282): CController->run('login')
+#7 C:\xampp\htdocs\tuhoc\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#8 C:\xampp\htdocs\tuhoc\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\tuhoc\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/tuhoc/index.php?r=site/login
+HTTP_REFERER=http://localhost/tuhoc/index.php?r=site/login
+---
+2015/12/16 09:25:32 [error] [exception.CException] exception 'CException' with message 'WebUser.allowAutoLogin must be set true in order to use cookie-based authentication.' in C:\xampp\htdocs\tuhoc\framework\web\auth\CWebUser.php:240
+Stack trace:
+#0 C:\xampp\htdocs\tuhoc\protected\models\LoginForm.php(71): CWebUser->login(Object(UserIdentity), 2592000)
+#1 C:\xampp\htdocs\tuhoc\protected\controllers\SiteController.php(94): LoginForm->login()
+#2 C:\xampp\htdocs\tuhoc\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#3 C:\xampp\htdocs\tuhoc\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\tuhoc\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\tuhoc\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\tuhoc\framework\web\CWebApplication.php(282): CController->run('login')
+#7 C:\xampp\htdocs\tuhoc\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#8 C:\xampp\htdocs\tuhoc\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\tuhoc\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/tuhoc/index.php?r=site/login
+HTTP_REFERER=http://localhost/tuhoc/index.php?r=site/login
+---
+2015/12/16 09:25:34 [error] [exception.CException] exception 'CException' with message 'WebUser.allowAutoLogin must be set true in order to use cookie-based authentication.' in C:\xampp\htdocs\tuhoc\framework\web\auth\CWebUser.php:240
+Stack trace:
+#0 C:\xampp\htdocs\tuhoc\protected\models\LoginForm.php(71): CWebUser->login(Object(UserIdentity), 2592000)
+#1 C:\xampp\htdocs\tuhoc\protected\controllers\SiteController.php(94): LoginForm->login()
+#2 C:\xampp\htdocs\tuhoc\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#3 C:\xampp\htdocs\tuhoc\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\tuhoc\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\tuhoc\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\tuhoc\framework\web\CWebApplication.php(282): CController->run('login')
+#7 C:\xampp\htdocs\tuhoc\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#8 C:\xampp\htdocs\tuhoc\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\tuhoc\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/tuhoc/index.php?r=site/login
+HTTP_REFERER=http://localhost/tuhoc/index.php?r=site/login
+---
+2015/12/16 09:26:23 [error] [exception.CException] exception 'CException' with message 'WebUser.allowAutoLogin must be set true in order to use cookie-based authentication.' in C:\xampp\htdocs\tuhoc\framework\web\auth\CWebUser.php:240
+Stack trace:
+#0 C:\xampp\htdocs\tuhoc\protected\models\LoginForm.php(71): CWebUser->login(Object(UserIdentity), 2592000)
+#1 C:\xampp\htdocs\tuhoc\protected\controllers\SiteController.php(94): LoginForm->login()
+#2 C:\xampp\htdocs\tuhoc\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#3 C:\xampp\htdocs\tuhoc\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\tuhoc\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\tuhoc\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\tuhoc\framework\web\CWebApplication.php(282): CController->run('login')
+#7 C:\xampp\htdocs\tuhoc\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#8 C:\xampp\htdocs\tuhoc\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\tuhoc\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/tuhoc/index.php?r=site/login
+HTTP_REFERER=http://localhost/tuhoc/index.php?r=site/login
+---
+2015/12/16 09:26:25 [error] [exception.CException] exception 'CException' with message 'WebUser.allowAutoLogin must be set true in order to use cookie-based authentication.' in C:\xampp\htdocs\tuhoc\framework\web\auth\CWebUser.php:240
+Stack trace:
+#0 C:\xampp\htdocs\tuhoc\protected\models\LoginForm.php(71): CWebUser->login(Object(UserIdentity), 2592000)
+#1 C:\xampp\htdocs\tuhoc\protected\controllers\SiteController.php(94): LoginForm->login()
+#2 C:\xampp\htdocs\tuhoc\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#3 C:\xampp\htdocs\tuhoc\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\tuhoc\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\tuhoc\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\tuhoc\framework\web\CWebApplication.php(282): CController->run('login')
+#7 C:\xampp\htdocs\tuhoc\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#8 C:\xampp\htdocs\tuhoc\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\tuhoc\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/tuhoc/index.php?r=site/login
+HTTP_REFERER=http://localhost/tuhoc/index.php?r=site/login
+---
+2015/12/16 09:27:59 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\tuhoc\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\tuhoc\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\tuhoc\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\tuhoc\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\tuhoc\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\tuhoc\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\tuhoc\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\tuhoc\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\tuhoc\framework\web\CWebApplication.php(282): CController->run('')
+#8 C:\xampp\htdocs\tuhoc\framework\web\CWebApplication.php(141): CWebApplication->runController('abc')
+#9 C:\xampp\htdocs\tuhoc\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\tuhoc\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/tuhoc/index.php?r=abc
+HTTP_REFERER=http://localhost/tuhoc/index.php?r=site/login
+---
+2015/12/16 09:29:10 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\tuhoc\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\tuhoc\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\tuhoc\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\tuhoc\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\tuhoc\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\tuhoc\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\tuhoc\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\tuhoc\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\tuhoc\framework\web\CWebApplication.php(282): CController->run('')
+#8 C:\xampp\htdocs\tuhoc\framework\web\CWebApplication.php(141): CWebApplication->runController('abc')
+#9 C:\xampp\htdocs\tuhoc\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\tuhoc\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/tuhoc/index.php?r=abc
+HTTP_REFERER=http://localhost/tuhoc/index.php?r=site/login
+---
+2015/12/16 09:29:15 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\tuhoc\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\tuhoc\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\tuhoc\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\tuhoc\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\tuhoc\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\tuhoc\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\tuhoc\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\tuhoc\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\tuhoc\framework\web\CWebApplication.php(282): CController->run('')
+#8 C:\xampp\htdocs\tuhoc\framework\web\CWebApplication.php(141): CWebApplication->runController('abc')
+#9 C:\xampp\htdocs\tuhoc\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\tuhoc\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/tuhoc/index.php?r=abc
+HTTP_REFERER=http://localhost/tuhoc/index.php?r=site/login
+---
+2015/12/16 09:29:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "bac".' in C:\xampp\htdocs\tuhoc\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\tuhoc\framework\web\CWebApplication.php(141): CWebApplication->runController('bac')
 #1 C:\xampp\htdocs\tuhoc\framework\base\CApplication.php(184): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\tuhoc\index.php(13): CApplication->run()
 #3 {main}
-REQUEST_URI=/tuhoc/index.php?r=rights
+REQUEST_URI=/tuhoc/index.php?r=bac
 ---
-2015/12/14 10:23:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "myController/run".' in C:\xampp\htdocs\tuhoc\framework\web\CWebApplication.php:286
+2015/12/16 09:38:32 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\tuhoc\framework\web\auth\CAccessControlFilter.php:182
 Stack trace:
-#0 C:\xampp\htdocs\tuhoc\framework\web\CWebApplication.php(141): CWebApplication->runController('myController/ru...')
-#1 C:\xampp\htdocs\tuhoc\framework\base\CApplication.php(184): CWebApplication->processRequest()
-#2 C:\xampp\htdocs\tuhoc\index.php(13): CApplication->run()
-#3 {main}
-REQUEST_URI=/tuhoc/index.php/myController/run
+#0 C:\xampp\htdocs\tuhoc\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\tuhoc\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\tuhoc\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\tuhoc\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\tuhoc\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\tuhoc\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\tuhoc\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\tuhoc\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\tuhoc\framework\web\CWebApplication.php(141): CWebApplication->runController('user/admin')
+#9 C:\xampp\htdocs\tuhoc\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\tuhoc\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/tuhoc/index.php?r=user/admin
 ---
-2015/12/14 10:39:17 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'tuhoc.tbl_migration' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `tbl_migration`.
-2015/12/14 10:39:58 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '{users}} SET create_at = FROM_UNIXTIME(createtime), lastvisit_at = IF(lastvisit,' at line 1. The SQL statement executed was: UPDATE {{users}} SET create_at = FROM_UNIXTIME(createtime), lastvisit_at = IF(lastvisit,FROM_UNIXTIME(lastvisit),'0000-00-00 00:00:00').
+2015/12/16 09:42:07 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\tuhoc\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\tuhoc\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\tuhoc\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\tuhoc\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\tuhoc\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\tuhoc\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\tuhoc\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\tuhoc\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\tuhoc\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\tuhoc\framework\web\CWebApplication.php(141): CWebApplication->runController('user/admin')
+#9 C:\xampp\htdocs\tuhoc\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\tuhoc\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/tuhoc/index.php?r=user/admin
+---
+2015/12/16 09:42:53 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\tuhoc\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\tuhoc\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\tuhoc\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\tuhoc\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\tuhoc\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\tuhoc\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\tuhoc\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\tuhoc\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\tuhoc\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\tuhoc\framework\web\CWebApplication.php(141): CWebApplication->runController('user/admin')
+#9 C:\xampp\htdocs\tuhoc\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\tuhoc\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/tuhoc/index.php?r=user/admin
+---
+2015/12/16 09:43:08 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\tuhoc\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\xampp\htdocs\tuhoc\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\tuhoc\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\tuhoc\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\tuhoc\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\tuhoc\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\tuhoc\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\tuhoc\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\tuhoc\framework\web\CWebApplication.php(282): CController->run('create')
+#8 C:\xampp\htdocs\tuhoc\framework\web\CWebApplication.php(141): CWebApplication->runController('user/create')
+#9 C:\xampp\htdocs\tuhoc\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\tuhoc\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/tuhoc/index.php?r=user/create
+HTTP_REFERER=http://localhost/tuhoc/index.php?r=user/index
+---

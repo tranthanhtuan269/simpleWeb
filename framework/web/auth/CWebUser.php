@@ -234,6 +234,7 @@ class CWebUser extends CApplicationComponent implements IWebUser
 
 			if($duration>0)
 			{
+				$this->allowAutoLogin = true;
 				if($this->allowAutoLogin)
 					$this->saveToCookie($duration);
 				else
