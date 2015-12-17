@@ -293,3 +293,30 @@ Stack trace:
 REQUEST_URI=/tuhoc/index.php?r=user/create
 HTTP_REFERER=http://localhost/tuhoc/index.php?r=user/index
 ---
+2015/12/17 04:13:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/bootstrap/fonts/VNARIS.TTF".' in C:\xampp\htdocs\tuhoc\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\tuhoc\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/bootstra...')
+#1 C:\xampp\htdocs\tuhoc\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\tuhoc\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/tuhoc/themes/bootstrap/fonts/VNARIS.TTF
+HTTP_REFERER=http://localhost/tuhoc/site/index
+---
+2015/12/17 04:13:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/bootstrap/fonts/VNARIS.TTF".' in C:\xampp\htdocs\tuhoc\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\tuhoc\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/bootstra...')
+#1 C:\xampp\htdocs\tuhoc\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\tuhoc\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/tuhoc/themes/bootstrap/fonts/VNARIS.TTF
+HTTP_REFERER=http://localhost/tuhoc/
+---
+2015/12/17 04:15:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "themes/bootstrap/fonts/abc.ttf".' in C:\xampp\htdocs\tuhoc\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\tuhoc\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/bootstra...')
+#1 C:\xampp\htdocs\tuhoc\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\tuhoc\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/tuhoc/themes/bootstrap/fonts/abc.ttf
+HTTP_REFERER=http://localhost/tuhoc/
+---
